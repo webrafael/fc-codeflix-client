@@ -1,29 +1,12 @@
 'use client';
-import Logo from './Logo';
-import NavLinks from './NavLinks';
-import UseProfile from './UserProfile';
-
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { useScroll } from '../hooks/UseScroll';
+import { Logo } from './Logo';
+import { NavLinks } from './NavLinks';
+import { UserProfile } from './UserProfile';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  const isScrolled = useScroll();
   return (
     <div
       className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}
@@ -33,7 +16,7 @@ export default function Header() {
         <NavLinks />
       </div>
 
-      <UseProfile />
+      <UserProfile />
     </div>
   );
 }

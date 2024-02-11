@@ -1,8 +1,8 @@
 import Image from 'next/image';
+import React from 'react';
 
-export default function UserProfile() {
+export const UserProfile = () => {
   const profileName = 'Kids';
-
   return (
     <div className='flex items-center space-x-4 md:space-x-8'>
       <p className='hidden cursor-not-allowed lg:inline'>{profileName}</p>
@@ -15,4 +15,4 @@ export default function UserProfile() {
       />
     </div>
   );
-}
+};
