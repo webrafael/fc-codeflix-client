@@ -7,3 +7,10 @@
     @apply bg-[#383838] text-white;
   }
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: inherit;
+  }
+}
