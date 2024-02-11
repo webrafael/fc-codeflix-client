@@ -1,12 +1,11 @@
 'use client';
-import React from 'react';
-import { useScroll } from '../hooks/UseScroll';
+import { UseScroll } from '../hooks/UseScroll';
 import { Logo } from './Logo';
 import { NavLinks } from './NavLinks';
 import { UserProfile } from './UserProfile';
 
 export default function Header() {
-  const isScrolled = useScroll();
+  const isScrolled = UseScroll();
   return (
     <div
       className={`
