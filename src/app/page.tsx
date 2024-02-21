@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className='relative h-full overflow-hidden bg-gradient-to-b from-transparent to-black to-[75%] lg:h-[140vh]'>
+    <div className='relative h-full bg-gradient-to-b from-transparent to-black to-[75%] pb-8'>
       <Header />
-      <main className='relative pb-24 pl-4 lg:pl-16'>
+      <main className='scrollbar-hide relative overflow-y-scroll p-8 pb-20 lg:px-16'>
         <Banner />
         <MoveRow sectionTitle='Trending Now' />
         <MoveRow sectionTitle='Top Rated' />
